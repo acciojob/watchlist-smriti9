@@ -44,7 +44,7 @@ public class MovieRepository {
            if(movieDirectormap.containsKey(directorName))
              movies=movieDirectormap.get(directorName);
            movies.add(movieName);
-           movieDirectormap.put(movieName,movies);
+           movieDirectormap.put(directorName,movies);
        }
    }
    List<String> findAllMovies()
