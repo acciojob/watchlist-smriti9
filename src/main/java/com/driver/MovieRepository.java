@@ -40,6 +40,8 @@ public class MovieRepository {
    void addMovieDirectorPair(String movieName,String directorName)
    {
        if(moviemap.containsKey(movieName) && directormap.containsKey(directorName)) {
+           moviemap.put(movieName,moviemap.get(movieName));
+           directormap.put(directorName,directormap.get(directormap));
            List<String> movies = new ArrayList<>();
            if(movieDirectormap.containsKey(directorName))
              movies=movieDirectormap.get(directorName);
