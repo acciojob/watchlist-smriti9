@@ -15,13 +15,13 @@ public class MovieController {
  MovieService movieService;
 
  @PostMapping("/add-movie")
-    public ResponseEntity<String> addMovie(Movie movie)
+    public ResponseEntity<String> addMovie(@RequestBody Movie movie)
  {
      movieService.addMovie(movie);
      return new ResponseEntity<>("New movie added Successfully", HttpStatus.CREATED);
  }
     @PostMapping("/add-director")
-    public ResponseEntity<String> addDirector(Director director)
+    public ResponseEntity<String> addDirector(@RequestBody Director director)
     {
         movieService.addDirector(director);
         return new ResponseEntity<>("New director added Successfully", HttpStatus.CREATED);
